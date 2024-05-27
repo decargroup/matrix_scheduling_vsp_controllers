@@ -9,6 +9,3 @@ control==0.10.0
 
 # cvxpy for the SDP
 cvxpy==1.5.1
-
-# mosek for the SDP solver
-Mosek==10.2.0
