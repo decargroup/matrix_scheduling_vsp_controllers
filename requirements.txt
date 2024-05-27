@@ -1,0 +1,14 @@
+# matplotlib for plotting
+matplotlib==3.9.0
+
+# scipy for scipy.linalg.cho_solve
+scipy==1.13.0
+
+# control for control.lqr
+control==0.10.0
+
+# cvxpy for the SDP
+cvxpy==1.5.1
+
+# mosek for the SDP solver
+Mosek==10.2.0
