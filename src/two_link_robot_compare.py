@@ -61,7 +61,7 @@ def simulate(sys_type= "Nonlinear",
     line_styles = ['-', ':', '-.', '--']
     labels = ["Desired", "Unscheduled", "Scalar GS", "Matrix GS"]
     lws    = [6, 5, 5, 4]
-    fig, axs = plt.subplots(2, 2, sharex=True, figsize=(12, 8))
+    fig, axs = plt.subplots(2, 2, sharex=True, figsize=(12, 9))
     for i in range(len(axs)):
         for j in range(len(results_th)):
             axs[0, i].plot(t, results_th[j][i], c=colors[j], ls=line_styles[j], lw=lws[j], label=labels[j])
@@ -112,16 +112,16 @@ def simulate(sys_type= "Nonlinear",
     
     # %---------------------------------------------- Torque ----------------------------------------------% #
     col_label = [r"$\tau_1$", r"$\tau_1$"]
-    fig, axs = plt.subplots(2, 1, sharex=True, figsize=(12, 6.5))
+    fig, axs = plt.subplots(1, 2, sharex=True, figsize=(12, 4.5))
     for i in range(len(axs)):
         for j in range(len(results_error_th)):
             axs[i].plot(t, results_u_ctrl[j][i], c=colors[j], ls=line_styles[j], lw=lws[j], label=labels[j])
         axs[i].set_xlim([0, T_END])
         axs[i].set_ylabel(rf'$\tau_{i+1}(t)$ [N$\,$m]')
-    axs[1].set_xlabel(r'Time $[s]$')
+        axs[i].set_xlabel(r'Time $[s]$')
     fig.align_labels()
-    axs[1].legend(loc='lower right', bbox_to_anchor=(1.0, 0.0), borderaxespad=0.05)
-    plt.subplots_adjust(hspace=0.1)
+    axs[-1].legend(loc='lower right', bbox_to_anchor=(1.0, 0.0), borderaxespad=0.05)
+    plt.subplots_adjust(wspace=0.35)
     if save_fig:
         file_name = "control_effort"
         fig.savefig('./Figures/' + file_name + ".pdf")
