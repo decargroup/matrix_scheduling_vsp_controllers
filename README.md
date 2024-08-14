@@ -1,6 +1,6 @@
 # Passivity-Based Gain-Scheduled Control with Scheduling Matrices
 
-Accompanying code for the control of the planar rigid two-link robotic manipulator used in Section V of Passivity-Based Gain-Scheduled Control with Scheduling Matrices. [arXiv](https://www.arxiv.org/abs/2408.06476)
+Accompanying code for the control of the planar rigid two-link robotic manipulator used in Section V of Passivity-Based Gain-Scheduled Control with Scheduling Matrices [[arXiv]](https://www.arxiv.org/abs/2408.06476).
 
 ## Installation
 
